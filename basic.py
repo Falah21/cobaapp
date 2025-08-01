@@ -125,7 +125,7 @@ elif st.session_state.page == "form":
         min_value=date(1980, 1, 1),
         max_value=date.today()
     )
-    jadian = st.date_input("3. Masukkan tanggal jadian anda:")
+    jadian = st.date_input("3. Masukkan tanggal rahasia kita:")
 
     col1, col2 = st.columns([1, 1])
     with col1:
@@ -135,7 +135,7 @@ elif st.session_state.page == "form":
     with col2:
         if st.button("💌 Kirim"):
             if jadian != date(2024, 3, 22):
-                st.error("Tanggal jadian yang dimasukkin belum tepat, coba diingat lagi yaa 😉")
+                st.error("Tanggal rahasia yang dimasukkin belum tepat, coba diingat lagi yaa 😉")
             else:
                 st.session_state.name = name
                 st.session_state.dob = dob
